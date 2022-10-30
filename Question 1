@@ -1,0 +1,45 @@
+//The results from the mayor’s race have been reported by each area as follows:
+// [Marks 5+5+5]
+//Area Candidate 1 Candidate 2 Candidate 3 Candidate 4
+//1 192 48 206 37
+//2 147 90 312 21
+//3 186 12 121 38
+//4 114 21 408 39
+//5 267 13 382 29
+//Your task is to store the above data into a 2D matrix to perform the analysis given below.
+//a) Write a function named “Check_Winner1” that would receive the 2D matrix as its
+//input and display the winner by each area.
+//
+//Expected output:
+//Area 1 : Candidate 3
+//Area 2 : Candidate 3
+//Area 3 : Candidate 1
+//Area 4 : Candidate 3
+//Area 5 : Candidate 3
+
+#include<stdio.h>
+int main(){
+	int data[5][6]= {{192,48,206,37},{147,90,312,21},{186,12,121,38},{114,21,408,39},{257,13,382,29}};
+	char win;
+	int i,j,max=0, output; 
+//	printf("Enter a for check_.
+//int.i,j, output,max;
+for (i=0; i<=4; i++)
+{
+max = 0, output = 0;
+for(j=0; j<=3; j++)
+{
+if(max<data[i][j])
+{
+max = data[i][j];
+output = j+1;
+}
+
+}
+
+printf("\nArea %d: Candidate %d\n", i+1, output);
+
+}
+}
+			
+	
