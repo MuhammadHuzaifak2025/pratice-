@@ -1,3 +1,4 @@
+//Question 1a
 //The results from the mayor’s race have been reported by each area as follows:
 // [Marks 5+5+5]
 //Area Candidate 1 Candidate 2 Candidate 3 Candidate 4
@@ -42,4 +43,40 @@ printf("\nArea %d: Candidate %d\n", i+1, output);
 }
 }
 			
+QUESTION 1B
+//Area Candidate 1 Candidate 2 Candidate 3 Candidate 4
+//1 192 48 206 37
+//2 147 90 312 21
+//3 186 12 121 38
+//4 114 21 408 39
+//5 267 13 382 29
+//		Write a function named “Check_Winner2” that would receive the 2D matrix as its
+//input and display the total votes received by each candidate.
+//Expected output:
+//Candidate 1 : Total votes 906
+//Candidate 2 : Total votes 184
+//Candidate 3 : Total votes 1429
+//Candidate 4 : Total votes 164
+//2 OF 2
+//c) Write a function named “Check_Winner3” that would receive the 2D matrix as its
+//input and returns the area number in which maximum votes are casted.
+//
+//Expected return: 5
+
+#include<stdio.h>
+int main(){
+	int data[5][5]= {{192,48,206,37},{147,90,312,21},{186,12,121,38},{114,21,408,39},{257,13,382,29}};
+	int sum, i= 0, j= 0;
+	for(j = 0; j< 4; j++){
 	
+	sum = 0;
+	{
+		for(i= 0; i<5; i++){
+			sum= sum +data[i][j];
+//			printf("%d", sum);
+			}
+		printf("candidate %d : %d votes\n",j+1, sum );
+	}
+}
+}
+
